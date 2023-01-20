@@ -15,6 +15,8 @@
 - [ ] Initial Brainstorm (game design)
 - [ ] Personal Schedules
 - [ ] Game prototype done
+- [ ] Score Composed
+- [ ] Assets designed
 - [ ] Actual game done
 - [ ] Submission ⭐ 
 
