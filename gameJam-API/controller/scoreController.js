@@ -1,6 +1,6 @@
 /*Saves score in the database*/
 const mongoose = require('mongoose');
-const score = require('../model/scoresSchema')
+const score_ = require('../model/scoresSchema')
 
 exports.setScore = async(req, res) => {
     try{
@@ -19,7 +19,7 @@ exports.setScore = async(req, res) => {
         
         /*Save information in database*/
 
-        const Score = await new score({
+        const Score = await new score_({
             Name: name,
             Score: score
         }).save();
@@ -28,6 +28,7 @@ exports.setScore = async(req, res) => {
             message: `Score saved!`
         })
     }catch(err){
-
+        console.log(err);
+        return res.status(400).send(err);
     }
 }
