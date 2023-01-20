@@ -32,3 +32,23 @@ exports.setScore = async(req, res) => {
         return res.status(400).send(err);
     }
 }
+
+exports.highScores = async(req, res) =>{
+    try{
+        /*Find all the scores save in database*/
+        const Score = await score_.find({}, function(err, scores){
+            if(err){
+                return res.status(402).send({
+                    message: 'Unexpected error'
+                })
+            }else{
+                /*Sort scores from highest to lowest*/
+                scores.sort((a,b) => a.Score < b.Score ? 1: -1);
+                return res.status(200).send(scores.slice(0, 20));
+            }
+        })
+
+    }catch(err){
+
+    }
+}
