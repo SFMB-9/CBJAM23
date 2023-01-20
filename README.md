@@ -8,10 +8,10 @@ By team [No team name given yet]
 ### Dev. Team Members
 [AndresBriC](https://github.com/AndresBriC) — Programmer, Designer, Artist  
 [m3llad0](https://github.com/m3llad0) — Programmer, Designer    
-[munij3](https://github.com/munij3) — Programmer, Designer    
+[munij3](https://github.com/munij3) — Programmer, Designer, Writer    
 [sebasgonvitec](https://github.com/sebasgonvitec) — Programmer, Artist, Composer     
-[firefrog88](https://github.com/Firefrog88) — Programmer, Designer, Artist, Composer   
-(Luisjakg)  
+[firefrog88](https://github.com/Firefrog88) — Programmer, Designer, Artist, Composer, Writer   
+[Luisjakg](https://github.com/Luisjakg) — Programmer, Designer, Artist, Composer   
 
 ### Tasks
 - [x] First session
