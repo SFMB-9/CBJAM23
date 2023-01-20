@@ -1,0 +1,27 @@
+{
+  "name": "gamejam-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SFMBa01029956/CBJAM23.git"
+  },
+  "author": "Diego Mellado Oliveros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SFMBa01029956/CBJAM23/issues"
+  },
+  "homepage": "https://github.com/SFMBa01029956/CBJAM23#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "n": "^9.0.1",
+    "stable": "^0.1.8"
+  }
+}
