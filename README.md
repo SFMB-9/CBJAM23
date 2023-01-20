@@ -10,9 +10,10 @@
 
 ### Tasks
 - [x] First session
+- [x] Engine Selection
+- [x] Initial Project Build (Unity)
 - [ ] Initial Brainstorm (game design)
 - [ ] Personal Schedules
-- [x] Unity Project Build (Empty)
 - [ ] Game prototype done
 - [ ] Actual game done
 - [ ] Submission ⭐ 
@@ -21,3 +22,5 @@
 
 - Unity 2021.3.16f1 — [Latest release](https://unity.com/releases/2021-lts) (As of 19/01/2023)
 - Visual Studio Code 1.74 — [Stable Build](https://code.visualstudio.com/) (As of 19/01/2023)
+
+19-01-2023 
