@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const score = mongoose.Schema({
 
-    name: {
+    Name: {
         type: String
     },
-    score: {
+    Score: {
         type: Number
     }
 })
