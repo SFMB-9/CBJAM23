@@ -1,13 +1,23 @@
 # 👾 CBJAM23 👾
 
-Unity --v 2021.3.16f1 [LTS] as of 19/01/2022
-⌨️ ✍️ 🎶 ⚙️ 🎨
-- [AndresBriC](https://github.com/AndresBriC)
-- [m3llad0](https://github.com/m3llad0)
-- [munij3](https://github.com/munij3)
-- [sebasgonvitec](https://github.com/sebasgonvitec)
-- [firefrog88](https://github.com/Firefrog88)
-- (Luisjakg)
+### Members
+[AndresBriC](https://github.com/AndresBriC) — Programmer, Designer, Artist  
+[m3llad0](https://github.com/m3llad0) — Programmer, Designer    
+[munij3](https://github.com/munij3) — Programmer, Designer    
+[sebasgonvitec](https://github.com/sebasgonvitec) — Programmer, Artist, Composer     
+[firefrog88](https://github.com/Firefrog88) — Programmer, Designer, Artist, Composer   
+(Luisjakg)  
 
-- [ ] Brainstorm
-- [ ] Horarios
+### Tasks
+- [x] First session
+- [ ] Initial Brainstorm (game design)
+- [ ] Personal Schedules
+- [x] Unity Project Build (Empty)
+- [ ] Game prototype done
+- [ ] Actual game done
+- [ ] Submission ⭐ 
+
+### Tools
+
+- Unity 2021.3.16f1 — [Latest release](https://unity.com/releases/2021-lts) (As of 19/01/2023)
+- Visual Studio Code 1.74 — [Stable Build](https://code.visualstudio.com/) (As of 19/01/2023)
