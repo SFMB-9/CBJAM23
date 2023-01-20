@@ -1,6 +1,11 @@
 # 👾 CBJAM23 👾
 
-### Members
+### ABOUT
+Repo for the Coding Blocks Jam '23
+The theme for the jam hasn't been assigned...
+By team [No team name given yet]
+
+### Dev. Team Members
 [AndresBriC](https://github.com/AndresBriC) — Programmer, Designer, Artist  
 [m3llad0](https://github.com/m3llad0) — Programmer, Designer    
 [munij3](https://github.com/munij3) — Programmer, Designer    
