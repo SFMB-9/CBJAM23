@@ -12,6 +12,7 @@
 - [x] First session
 - [x] Engine Selection
 - [x] Initial Project Build (Unity)
+- [ ] JAM STARTS!! 19/01/2023 - 23:00
 - [ ] Initial Brainstorm (game design)
 - [ ] Personal Schedules
 - [ ] Game prototype done
@@ -26,6 +27,3 @@
 - Visual Studio Code 1.74 — [Stable Build](https://code.visualstudio.com/) (As of 19/01/2023)
 
 19-01-2023 
-
-----
-To open the Unity Project first clone the repository, then in Unity Hub open the "GameJamUnity" folder as a project.
