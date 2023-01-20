@@ -27,3 +27,6 @@
 - Visual Studio Code 1.74 — [Stable Build](https://code.visualstudio.com/) (As of 19/01/2023)
 
 19-01-2023 
+
+----
+To open the Unity Project first clone the repository, then in Unity Hub open the "GameJamUnity" folder as a project.
