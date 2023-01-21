@@ -44,7 +44,7 @@ exports.highScores = async(req, res) =>{
             }else{
                 /*Sort scores from highest to lowest*/
                 scores.sort((a,b) => a.Score < b.Score ? 1: -1);
-                return res.status(200).send(scores.slice(0, 20));
+                return res.status(200).send({"score": scores.slice(0, 10)});
             }
         })
 
