@@ -32,7 +32,9 @@ public class ScoresTable : MonoBehaviour
     // string highscores = "highScores";
     ScoreList scoreList;
     int listSize;
+    [SerializeField]
     Transform entryContainer;
+    [SerializeField]
     Transform entryTemplate;
 
     // Start is called before the first frame update
@@ -41,16 +43,13 @@ public class ScoresTable : MonoBehaviour
         scoreList = new ScoreList();
         StartCoroutine(Highscores());
 
-        entryContainer = transform.Find("Information");
-        entryTemplate = transform.Find("Placeholder");
-
         entryTemplate.gameObject.SetActive(false);
 
     
     }
 
     IEnumerator Highscores(){
-        UnityWebRequest www = UnityWebRequest.Get("http://localhost:8000/highScores");
+        UnityWebRequest www = UnityWebRequest.Get("https://morbin-backend.onrender.com/highScores");
         yield  return www.SendWebRequest();
 
         if(www.result != UnityWebRequest.Result.Success){
@@ -62,13 +61,11 @@ public class ScoresTable : MonoBehaviour
 
         listSize = scoreList.score.Count;
 
-        Debug.Log(scoreList.score[1].Name);
-
         for(int i = 0; i < listSize; i++)
         {
             Transform entryTransform = Instantiate(entryTemplate, entryContainer);
             RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
-            entryRectTransform.anchoredPosition = new Vector2(0, -80f * i);
+            entryRectTransform.anchoredPosition = new Vector2(0, -65f * i);
             entryTransform.gameObject.SetActive(true);
 
             int rank = i + 1;
