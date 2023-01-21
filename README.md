@@ -17,8 +17,8 @@ By team [No team name given yet]
 - [x] First session
 - [x] Engine Selection
 - [x] Initial Project Build (Unity)
-- [ ] JAM STARTS!! 19/01/2023 - 23:00
-- [ ] Initial Brainstorm (game design)
+- [x] JAM STARTS!! 19/01/2023 - 23:00
+- [x] Initial Brainstorm (game design)
 - [ ] UI Structures built
 - [ ] Game prototype done
 - [ ] Score Composed
