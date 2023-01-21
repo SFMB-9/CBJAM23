@@ -56,6 +56,9 @@ public class PlayerController : MonoBehaviour
     {
         movementInput = value.Get<Vector2>();
     }
+    void OnFire() {
+        animator.SetTrigger("biteAttack");
+    }
     void LockMovement() {
         canMove = false;
     }
