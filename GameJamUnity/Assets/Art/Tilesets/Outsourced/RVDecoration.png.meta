@@ -6175,10 +6175,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RVDecoration_112: -1819770867
       RVDecoration_14: 627614395
       RVDecoration_79: -241424237
       RVDecoration_195: -1197741977
+      RVDecoration_58: -1290119225
       RVDecoration_145: 484253201
       RVDecoration_94: -487095438
       RVDecoration_148: 2086917100
@@ -6460,9 +6460,9 @@ TextureImporter:
       RVDecoration_106: -1683417586
       RVDecoration_22: -1769800227
       RVDecoration_252: 99211998
-      RVDecoration_101: 1091978616
-      RVDecoration_58: -1290119225
+      RVDecoration_112: -1819770867
       RVDecoration_246: 1295179255
+      RVDecoration_101: 1091978616
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

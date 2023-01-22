@@ -155,6 +155,7 @@ public class NPCController : MonoBehaviour
     //FOV Gizmos
     private void OnDrawGizmosSelected()
     {
+        if (isInfected) return;
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
         
