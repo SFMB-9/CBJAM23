@@ -21,7 +21,7 @@ By team [No team name given yet]
 - [x] Initial Brainstorm (game design)
 - [ ] UI Structures built
 - [ ] Game prototype done
-- [ ] Score Composed
+- [x] Score Composed
 - [ ] Assets designed
 - [ ] Actual game done
 - [ ] Submission ⭐ 
