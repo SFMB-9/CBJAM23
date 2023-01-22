@@ -96,6 +96,7 @@ public class NPCController : MonoBehaviour
         if (rangeChecks.Length != 0)
         {
             target = rangeChecks[0].transform;
+            
             Vector2 directionToTarget = (target.position - transform.position).normalized;
             
             if (Vector2.Angle(transform.up, directionToTarget) < viewAngle / 2)
@@ -145,6 +146,10 @@ public class NPCController : MonoBehaviour
     {
         // GetComponent<SpriteRenderer>().color = Color.red;
         isInfected = true;
+        transform.tag = "Infected";
+        
+        // Change object layer to Infected
+        gameObject.layer = LayerMask.NameToLayer("Infected");
     }
     
     //FOV Gizmos
