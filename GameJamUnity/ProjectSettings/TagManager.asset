@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Placeholder
   - Container
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -13,9 +14,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Obstruction
+  - Player
+  - Interactable
   - 
   - 
   - 
