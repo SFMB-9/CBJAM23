@@ -22,8 +22,8 @@ public class MusicLoop : MonoBehaviour
     private IEnumerator PlayLooping()
     {
         introSource.Play();
-        yield return new WaitForSeconds(introSource.clip.length - 1f);
-        loopSource.PlayOneShot(loop);
+        yield return new WaitForSeconds(introSource.clip.length - 1.1f);
+        loopSource.Play();
         loopSource.PlayScheduled(AudioSettings.dspTime + loop.length);
     }
 
