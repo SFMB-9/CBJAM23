@@ -31,11 +31,14 @@ public class Health : MonoBehaviour
     private Transform lightTransform;
     [SerializeField] private bool onLight;
     private bool dead;
-
+    private Animator animator;
+    PlayerController playerController;
 
     private void Awake()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
+        playerController = GetComponent<PlayerController>();
     }
 
     private void Start()
@@ -84,6 +87,8 @@ public class Health : MonoBehaviour
         dead = true;
         StopCoroutine(UpdateHealth());
         
+        animator.SetTrigger("Die");
+        playerController.LockMovement();
         // TODO CALL TO THE ANIMATIONS & STOP MOVEMENT
     }
     
@@ -146,7 +151,7 @@ public class Health : MonoBehaviour
     
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, lightRange);
 
         if (onLight)

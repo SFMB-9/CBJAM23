@@ -24,6 +24,7 @@ public class NPCController : MonoBehaviour
     private bool canSeePlayer;
     private bool sawPlayer;
     private bool isInfected;
+    private Animator animator;
 
     public enum NPCState
     {
@@ -37,6 +38,7 @@ public class NPCController : MonoBehaviour
     private void Awake()
     {
         mover = GetComponent<Mover>();
+        animator = GetComponent<Animator>();
         sawPlayer = false;
         isInfected = false;
     }
@@ -69,7 +71,6 @@ public class NPCController : MonoBehaviour
             return;
         else if (currentState == NPCState.RunningAway)
         {
-            // GetComponent<SpriteRenderer>().color = Color.yellow;
             RunAwayFromPlayer();
         }
         else if (currentState == NPCState.Following)
@@ -99,13 +100,12 @@ public class NPCController : MonoBehaviour
             
             Vector2 directionToTarget = (target.position - transform.position).normalized;
             
-            if (Vector2.Angle(transform.up, directionToTarget) < viewAngle / 2)
+            if (Vector2.Angle(transform.right, directionToTarget) < viewAngle / 2)
             {
                 float distanceToTarget = Vector2.Distance(transform.position, target.position);
 
                 if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
-                    Debug.Log("Player in FOV");
                     canSeePlayer = true;
                     sawPlayer = true;
                 }
@@ -147,10 +147,18 @@ public class NPCController : MonoBehaviour
         // GetComponent<SpriteRenderer>().color = Color.red;
         isInfected = true;
         transform.tag = "Infected";
+        animator.SetTrigger("Infect");
         
         // Change object layer to Infected
         int infectLayer = LayerMask.NameToLayer("Infected");
         gameObject.layer = infectLayer;
+        
+        
+    }
+
+    public bool GetIsInfected()
+    {
+        return isInfected;
     }
     
     //FOV Gizmos
@@ -160,8 +168,8 @@ public class NPCController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
         
-        Vector2 fovLine1 = Quaternion.AngleAxis(viewAngle / 2, transform.forward) * transform.up * viewRadius;
-        Vector2 fovLine2 = Quaternion.AngleAxis(-viewAngle / 2, transform.forward) * transform.up * viewRadius;
+        Vector2 fovLine1 = Quaternion.AngleAxis(viewAngle / 2, transform.forward) * transform.right * viewRadius;
+        Vector2 fovLine2 = Quaternion.AngleAxis(-viewAngle / 2, transform.forward) * transform.right * viewRadius;
         
         Gizmos.color = Color.yellow;
         Gizmos.DrawRay(transform.position, fovLine1);
