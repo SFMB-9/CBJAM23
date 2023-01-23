@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
     //TODO CALL BITE ANIMATION & SOUND
     }
     
-    void LockMovement() {
+    public void LockMovement() {
         canMove = false;
     }
     void UnlockMovement() {
@@ -146,9 +146,9 @@ public class PlayerController : MonoBehaviour
         transform.position = destination;
     }
     // FOV gizmo
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, biteRange);
 
         if (canInteract)

@@ -8,7 +8,7 @@ using UnityEngine;
 public class RoamingBehavior : MonoBehaviour
 {
     [SerializeField] private float radius = 5f;
-    [SerializeField] private float roamSpeed = 5f;
+    [SerializeField] private float roamSpeed = 3f;
     [SerializeField] private float roamWaitTime = 5f;
     private Mover mover;
     private bool lookingForRoamPoint = false;
