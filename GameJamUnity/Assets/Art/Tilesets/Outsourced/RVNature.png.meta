@@ -6312,11 +6312,10 @@ TextureImporter:
       RVNature_213: 1502629147
       RVNature_54: -464123905
       RVNature_254: 389877580
-      RVNature_25: -2120004702
       RVNature_36: 940765632
       RVNature_198: 742615667
-      RVNature_67: -1092404838
       RVNature_270: 1112244647
+      RVNature_67: -1092404838
       RVNature_258: -527355190
       RVNature_242: 947587375
       RVNature_103: 327119807
@@ -6325,6 +6324,7 @@ TextureImporter:
       RVNature_158: -842685781
       RVNature_117: -1849677445
       RVNature_138: 1107082354
+      RVNature_25: -2120004702
       RVNature_111: -1842732681
       RVNature_123: 683465533
       RVNature_153: 834084585
@@ -6352,9 +6352,9 @@ TextureImporter:
       RVNature_104: -46619012
       RVNature_80: -1818287448
       RVNature_47: -910803089
-      RVNature_235: -1042753159
-      RVNature_210: -1501217703
       RVNature_203: 367184406
+      RVNature_210: -1501217703
+      RVNature_235: -1042753159
       RVNature_174: -311594348
       RVNature_232: -412400715
       RVNature_92: 1456660798
@@ -6420,10 +6420,10 @@ TextureImporter:
       RVNature_30: -398051701
       RVNature_93: 50293603
       RVNature_84: -2075016896
-      RVNature_167: 425973000
       RVNature_256: 1463216987
-      RVNature_52: 1345565150
       RVNature_261: 371092974
+      RVNature_52: 1345565150
+      RVNature_6: 221379871
       RVNature_217: 1419079690
       RVNature_106: 840904916
       RVNature_286: 484490489
@@ -6434,7 +6434,7 @@ TextureImporter:
       RVNature_70: 1555538298
       RVNature_20: 2133314058
       RVNature_96: -1037539368
-      RVNature_6: 221379871
+      RVNature_167: 425973000
       RVNature_284: 1935559491
       RVNature_108: 362368978
       RVNature_79: -2052878945
