@@ -11,15 +11,6 @@ public class Health : MonoBehaviour
     [SerializeField] private float lightHealthRegen = 0.1f;
     [SerializeField] private float darkHealthLoss = 0.1f;
     [SerializeField] private float healthChangeRate = 0.1f;
-    
-    
-    [Header("Health Bar")]
-    [SerializeField] private GameObject healthBar;
-    [SerializeField] private float healthBarLength;
-    [SerializeField] private float healthBarHeight;
-    [SerializeField] private float healthBarX;
-    [SerializeField] private float healthBarY;
-    public static Action<float> OnTakeDamage;
     public static Action<float> OnDamage;
     public static Action<float> OnHeal;
     
@@ -48,18 +39,9 @@ public class Health : MonoBehaviour
         StartCoroutine(UpdateHealth());
         StartCoroutine(LightFOVRoutine());
     }
-
-    private void OnEnable()
-    {
-        OnTakeDamage += ApplyDamage;
-    }
     
-    private void OnDisable()
-    {
-        OnTakeDamage -= ApplyDamage;
-    }
 
-    private void ApplyDamage(float damage)
+    public void ApplyDamage(float damage)
     {
         currentHealth -= damage;
         OnDamage?.Invoke(currentHealth);
