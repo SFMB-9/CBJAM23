@@ -34,6 +34,8 @@ public class Health : MonoBehaviour
     private Animator animator;
     PlayerController playerController;
 
+    [SerializeField] private AudioSource damageSoundEffect;
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -67,6 +69,7 @@ public class Health : MonoBehaviour
             currentHealth = 0;
             Die();
         }
+
     }
     
     private void ApplyHealing(float healing)
@@ -100,9 +103,19 @@ public class Health : MonoBehaviour
         while (!dead)
         {
             if (onLight)
+            {
                 ApplyHealing(lightHealthRegen);
+                damageSoundEffect.Stop();
+            }
             else
+            {
                 ApplyDamage(darkHealthLoss);
+                if (!damageSoundEffect.isPlaying)
+                {
+                    damageSoundEffect.Play();
+                }
+            }
+                
 
             yield return timeToWait;
         }
