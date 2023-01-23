@@ -120,7 +120,7 @@ TextureImporter:
       name: crypt_assets_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 144
         width: 32
         height: 80
@@ -141,7 +141,7 @@ TextureImporter:
       name: crypt_assets_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 32
         y: 144
         width: 32
         height: 80
@@ -162,8 +162,8 @@ TextureImporter:
       name: crypt_assets_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 192
+        x: 64
+        y: 176
         width: 48
         height: 48
       alignment: 9
@@ -183,8 +183,8 @@ TextureImporter:
       name: crypt_assets_3
       rect:
         serializedVersion: 2
-        x: 80
-        y: 144
+        x: 144
+        y: 176
         width: 48
         height: 48
       alignment: 9
@@ -204,8 +204,8 @@ TextureImporter:
       name: crypt_assets_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
+        x: 112
+        y: 144
         width: 32
         height: 80
       alignment: 9
@@ -226,7 +226,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 160
+        y: 16
         width: 48
         height: 80
       alignment: 9
@@ -247,7 +247,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 128
+        y: 96
         width: 48
         height: 32
       alignment: 9
@@ -268,7 +268,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 96
+        y: 128
         width: 48
         height: 32
       alignment: 9
@@ -288,8 +288,8 @@ TextureImporter:
       name: crypt_assets_8
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
+        x: 64
+        y: 144
         width: 48
         height: 16
       alignment: 0
@@ -309,8 +309,8 @@ TextureImporter:
       name: crypt_assets_9
       rect:
         serializedVersion: 2
-        x: 112
-        y: 128
+        x: 64
+        y: 160
         width: 48
         height: 16
       alignment: 0
@@ -330,7 +330,7 @@ TextureImporter:
       name: crypt_assets_10
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 16
         width: 48
         height: 128
@@ -338,7 +338,17 @@ TextureImporter:
       pivot: {x: 0.8333333, y: 0.0625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: -64}
+        - {x: -24, y: 64}
+        - {x: 24, y: 64}
+        - {x: 24, y: -64}
+        - {x: 16, y: -64}
+        - {x: 16, y: -13}
+        - {x: 3, y: 0}
+        - {x: -3, y: 0}
+        - {x: -16, y: -13}
+        - {x: -16, y: -64}
       tessellationDetail: 0
       bones: []
       spriteID: 7c97ad6acc9f432448c4bce21bdb14a2
@@ -351,7 +361,7 @@ TextureImporter:
       name: crypt_assets_11
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 16
         width: 48
         height: 128
@@ -372,8 +382,8 @@ TextureImporter:
       name: crypt_assets_12
       rect:
         serializedVersion: 2
-        x: 112
-        y: 16
+        x: 96
+        y: 48
         width: 16
         height: 80
       alignment: 9
@@ -393,8 +403,8 @@ TextureImporter:
       name: crypt_assets_13
       rect:
         serializedVersion: 2
-        x: 112
-        y: 96
+        x: 96
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -414,8 +424,8 @@ TextureImporter:
       name: crypt_assets_14
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 112
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -435,8 +445,8 @@ TextureImporter:
       name: crypt_assets_15
       rect:
         serializedVersion: 2
-        x: 128
-        y: 16
+        x: 112
+        y: 48
         width: 16
         height: 80
       alignment: 9
@@ -456,8 +466,8 @@ TextureImporter:
       name: crypt_assets_16
       rect:
         serializedVersion: 2
-        x: 144
-        y: 16
+        x: 128
+        y: 48
         width: 16
         height: 64
       alignment: 9
@@ -477,8 +487,8 @@ TextureImporter:
       name: crypt_assets_17
       rect:
         serializedVersion: 2
-        x: 160
-        y: 16
+        x: 144
+        y: 48
         width: 16
         height: 80
       alignment: 9
@@ -498,8 +508,8 @@ TextureImporter:
       name: crypt_assets_18
       rect:
         serializedVersion: 2
-        x: 176
-        y: 16
+        x: 144
+        y: 128
         width: 16
         height: 48
       alignment: 9
@@ -520,7 +530,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 16
+        y: 160
         width: 16
         height: 64
       alignment: 9
@@ -536,6 +546,321 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CryptPieces_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfacde040041db145906f571597e47be
+      internalID: 358643744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9766daffa807ed4a8c4a59c596f6bff
+      internalID: -885582330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec2bf6c77243a8488928886e464d551
+      internalID: -1901844215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685b098db78b54c40b7c3483a4d755f5
+      internalID: 766521799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b566dfdd099e5c740a574f2ab11bcad3
+      internalID: -1925459300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_5
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c871d9c298a9a42abf38dd54c116a9
+      internalID: 2089192480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf64a9310cb4a0a4eb58290e9ab76f56
+      internalID: -587141357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fab5e1cfada78a4db982197e87ab1ce
+      internalID: -1646902972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae90b041ee925f46a5b6a223f96c466
+      internalID: -745571428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3b21164955f824898e0704b326974f
+      internalID: 1142387648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f8e114e4491034aaa4e23843cc2061
+      internalID: 2033906487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403ab43d38cd51e458b34da80386f6b7
+      internalID: 620115910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59cc93c109057a419c34af746002c2f
+      internalID: -366794927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809c391b6b1028843be26b2d5b39c7c9
+      internalID: 1821289028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CryptPieces_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93aafe81012f51541bef9792bfeeaa82
+      internalID: 745332283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -547,12 +872,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      CryptPieces_8: -745571428
+      CryptPieces_10: 2033906487
       crypt_assets_1: -511096960
       crypt_assets_6: -1628465107
       crypt_assets_19: 1641060252
+      CryptPieces_0: 358643744
       crypt_assets_3: 1738171367
+      CryptPieces_13: 1821289028
       crypt_assets_11: 1972492008
       crypt_assets_9: -1769199524
+      CryptPieces_12: -366794927
+      CryptPieces_9: 1142387648
       crypt_assets_13: -1754692768
       crypt_assets_5: -33295820
       crypt_assets_18: -893312024
@@ -560,13 +891,22 @@ TextureImporter:
       crypt_assets_14: -1601875858
       crypt_assets_16: -920971661
       crypt_assets_0: -228444518
+      CryptPieces_6: -587141357
+      CryptPieces_14: 745332283
       crypt_assets_4: -350958271
-      crypt_assets_12: 206998622
       crypt_assets_17: 354498096
+      crypt_assets_12: 206998622
       crypt_assets_15: 781608876
+      CryptPieces_1: -885582330
       crypt_assets_10: 1254732690
       crypt_assets_2: -413265337
+      CryptPieces_3: 766521799
+      CryptPieces_11: 620115910
+      CryptPieces_2: -1901844215
       crypt_assets_7: -1257638863
+      CryptPieces_5: 2089192480
+      CryptPieces_7: -1646902972
+      CryptPieces_4: -1925459300
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
