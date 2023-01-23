@@ -17,6 +17,8 @@ public class NPCController : MonoBehaviour
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private LayerMask obstructionMask;
     [SerializeField] private float minimumDistanceToPlayer = 1f;
+
+    [SerializeField] private AudioSource screamSoundEffect;
     
     private GameObject player;
     private Mover mover;
@@ -108,6 +110,10 @@ public class NPCController : MonoBehaviour
                 {
                     canSeePlayer = true;
                     sawPlayer = true;
+                    if (!screamSoundEffect.isPlaying)
+                    {
+                        screamSoundEffect.Play();
+                    }
                 }
                 else
                     canSeePlayer = false;
@@ -140,6 +146,7 @@ public class NPCController : MonoBehaviour
         Vector2 direction = (transform.position - player.transform.position).normalized;
         Vector3 runAwayPosition = transform.position + new Vector3(direction.x, direction.y, 1f) * 2f;
         mover.MoveTo(runAwayPosition, runSpeed);
+
     }
     
     public void Infect()
@@ -179,7 +186,7 @@ public class NPCController : MonoBehaviour
         if (canSeePlayer)
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawRay(transform.position, (target.transform.position - transform.position).normalized * viewRadius);    
+            Gizmos.DrawRay(transform.position, (target.transform.position - transform.position).normalized * viewRadius);
         }
     }
     
