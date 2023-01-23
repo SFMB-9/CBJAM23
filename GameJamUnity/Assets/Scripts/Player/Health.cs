@@ -29,6 +29,7 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
+        dead = false;
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
         playerController = GetComponent<PlayerController>();
@@ -68,6 +69,8 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        StopAllCoroutines();
+        damageSoundEffect.clip = null;
         currentHealth = 0;
         dead = true;
         StopCoroutine(UpdateHealth());
