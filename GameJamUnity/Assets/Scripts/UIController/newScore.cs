@@ -8,7 +8,13 @@ public class newScore : MonoBehaviour
 {
     string initials;
     int score = 0;
+    [SerializeField]
+    GameObject TextScore;
 
+    void Awake()
+    {
+        TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
+    }
     IEnumerator NewScore(int score, string name)
     {
         WWWForm form = new WWWForm();
