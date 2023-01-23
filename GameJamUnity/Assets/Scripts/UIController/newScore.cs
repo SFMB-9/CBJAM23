@@ -10,6 +10,8 @@ public class newScore : MonoBehaviour
     int score = 0;
     [SerializeField]
     GameObject TextScore;
+    [SerializeField]
+    GameObject placerHolderInput;
 
     void Awake()
     {
@@ -35,11 +37,15 @@ public class newScore : MonoBehaviour
     public void readString(string text)
     {
         initials = text;
-        Debug.Log(initials);
     }
 
     public void onClick()
     {
-        StartCoroutine(NewScore(score, initials));
+        if(initials == null){
+            placerHolderInput.GetComponent<TMP_Text>().text = "Enter valid input";
+        }else
+        {
+            StartCoroutine(NewScore(score, initials));
+        }
     }
 }
