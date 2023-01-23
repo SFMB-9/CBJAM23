@@ -15,7 +15,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Input Settings")] 
     [SerializeField] private InputActionReference bite;
-    
+
+    [SerializeField] private AudioSource stepsSoundEffect;
+    [SerializeField] private AudioSource biteSoundEffect;
+
     [Header("Movement Parameters")]
     public float movementSpeed = 3f;
     public float maxSpeed = 1f;
@@ -69,6 +72,18 @@ public class PlayerController : MonoBehaviour
             IsMoving = false;
         }
         animator.SetFloat("Speed", movementInput.sqrMagnitude);
+
+        if (isMoving) {
+            if (!stepsSoundEffect.isPlaying)
+            {
+                stepsSoundEffect.Play();
+            }
+
+        }
+        else
+        {
+            stepsSoundEffect.Stop();
+        }
     }
 
     void OnMove(InputValue value)
@@ -84,8 +99,10 @@ public class PlayerController : MonoBehaviour
         target.GetComponent<NPCController>().Infect();
         StartCoroutine(MoveTowards(target.position, .1f));
         animator.SetTrigger("biteAttack");
-        
-    //TODO CALL BITE ANIMATION & SOUND
+        biteSoundEffect.Play();
+       
+
+        //TODO CALL BITE ANIMATION & SOUND
     }
     
     public void LockMovement() {
