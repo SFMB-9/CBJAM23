@@ -79,12 +79,15 @@ public class PlayerController : MonoBehaviour
     private void Bite(InputAction.CallbackContext obj)
     {
         if (!canInteract) return;
-        if (target.CompareTag("NPC"))
-        {
-            target.GetComponent<NPCController>().Infect();
-        }
+        if (!target.CompareTag("NPC")) return;
+        
+        target.GetComponent<NPCController>().Infect();
+        StartCoroutine(MoveTowards(target.position, .1f));
         animator.SetTrigger("biteAttack");
+        
+    //TODO CALL BITE ANIMATION & SOUND
     }
+    
     void LockMovement() {
         canMove = false;
     }
@@ -128,7 +131,20 @@ public class PlayerController : MonoBehaviour
             canInteract = false;
         }
     }
-    
+
+    private IEnumerator MoveTowards(Vector2 targetDestination, float time)
+    {
+        Vector2 startPosition = transform.position;
+        var destination = new Vector2(targetDestination.x -.2f, targetDestination.y); 
+        float elapsedTime = 0;
+        while (elapsedTime < time)
+        {
+            transform.position = Vector2.Lerp(startPosition, destination, (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = destination;
+    }
     // FOV gizmo
     private void OnDrawGizmos()
     {

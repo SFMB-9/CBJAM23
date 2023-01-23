@@ -78,7 +78,7 @@ public class NPCController : MonoBehaviour
 
     private IEnumerator FOVroutine()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.2f);
+        WaitForSeconds wait = new WaitForSeconds(0.3f);
         while (!sawPlayer && !isInfected)
         {
             yield return wait;
@@ -149,7 +149,8 @@ public class NPCController : MonoBehaviour
         transform.tag = "Infected";
         
         // Change object layer to Infected
-        gameObject.layer = LayerMask.NameToLayer("Infected");
+        int infectLayer = LayerMask.NameToLayer("Infected");
+        gameObject.layer = infectLayer;
     }
     
     //FOV Gizmos
