@@ -495,7 +495,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -40}
+        - {x: -8, y: -25}
+        - {x: 8, y: -25}
+        - {x: 8, y: -40}
       tessellationDetail: 0
       bones: []
       spriteID: 47ffc8a884f6d8e449b2c3d983473ed8
@@ -873,7 +877,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       CryptPieces_8: -745571428
-      CryptPieces_10: 2033906487
+      CryptPieces_4: -1925459300
       crypt_assets_1: -511096960
       crypt_assets_6: -1628465107
       crypt_assets_19: 1641060252
@@ -906,7 +910,7 @@ TextureImporter:
       crypt_assets_7: -1257638863
       CryptPieces_5: 2089192480
       CryptPieces_7: -1646902972
-      CryptPieces_4: -1925459300
+      CryptPieces_10: 2033906487
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
