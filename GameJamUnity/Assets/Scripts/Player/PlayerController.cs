@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     public float biteRange = 1.5f;
     public LayerMask interactableLayer;
     public LayerMask obstructionMask;
+    public float biteDamage = 20f;
+    public static Action OnBite;
 
 
     Vector2 movementInput = Vector2.zero;
@@ -38,12 +40,14 @@ public class PlayerController : MonoBehaviour
     bool isMoving = false;
     private bool canInteract;
     private Transform target;
+    private Health health;
     
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(FOVroutine());
+        health = GetComponent<Health>();
     }
 
     private void OnEnable()
@@ -96,7 +100,9 @@ public class PlayerController : MonoBehaviour
         if (!canInteract) return;
         if (!target.CompareTag("NPC")) return;
         
+        OnBite?.Invoke();
         target.GetComponent<NPCController>().Infect();
+        health.ApplyDamage(biteDamage);
         StartCoroutine(MoveTowards(target.position, .1f));
         animator.SetTrigger("biteAttack");
         biteSoundEffect.Play();
