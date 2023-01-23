@@ -9,10 +9,14 @@ public class newScore : MonoBehaviour
     string initials;
     int score = 0;
     [SerializeField]
+    GameObject obj;
+    [SerializeField]
     GameObject TextScore;
 
     void Awake()
     {
+        score = obj.GetComponent<ScoreDisplay>().currentScore;
+        
         TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
     }
     IEnumerator NewScore(int score, string name)
