@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
     //TODO CALL BITE ANIMATION & SOUND
     }
     
-    void LockMovement() {
+    public void LockMovement() {
         canMove = false;
     }
     void UnlockMovement() {

@@ -24,6 +24,7 @@ public class NPCController : MonoBehaviour
     private bool canSeePlayer;
     private bool sawPlayer;
     private bool isInfected;
+    private Animator animator;
 
     public enum NPCState
     {
@@ -37,6 +38,7 @@ public class NPCController : MonoBehaviour
     private void Awake()
     {
         mover = GetComponent<Mover>();
+        animator = GetComponent<Animator>();
         sawPlayer = false;
         isInfected = false;
     }
@@ -145,10 +147,13 @@ public class NPCController : MonoBehaviour
         // GetComponent<SpriteRenderer>().color = Color.red;
         isInfected = true;
         transform.tag = "Infected";
+        animator.SetTrigger("Infect");
         
         // Change object layer to Infected
         int infectLayer = LayerMask.NameToLayer("Infected");
         gameObject.layer = infectLayer;
+        
+        
     }
 
     public bool GetIsInfected()
