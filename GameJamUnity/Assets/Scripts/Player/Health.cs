@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
     [SerializeField] private LayerMask lightMask;
     [SerializeField] private LayerMask obstructionMask;
     
-    private Transform lightTransform;
+    private GameObject targetLight;
     [SerializeField] private bool onLight;
     private bool dead;
     private Animator animator;
@@ -89,6 +89,8 @@ public class Health : MonoBehaviour
         {
             if (onLight)
             {
+                if (targetLight != null)
+                    targetLight.GetComponent<LightController>().TakeDamage(lightHealthRegen);
                 ApplyHealing(lightHealthRegen);
                 damageSoundEffect.Stop();
             }
@@ -125,10 +127,10 @@ public class Health : MonoBehaviour
         
         if (rangeChecks.Length != 0)
         {
-            lightTransform = rangeChecks[0].transform;
-            Vector2 directionToTarget = (lightTransform.transform.position - transform.position).normalized;
+            targetLight = rangeChecks[0].gameObject;
+            Vector2 directionToTarget = (targetLight.transform.position - transform.position).normalized;
             
-            float distanceToTarget = Vector2.Distance(transform.position, lightTransform.transform.position);
+            float distanceToTarget = Vector2.Distance(transform.position, targetLight.transform.position);
 
             if (distanceToTarget <= range)
             {
@@ -155,7 +157,7 @@ public class Health : MonoBehaviour
         if (onLight)
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawRay(transform.position, (lightTransform.position - transform.position).normalized * lightRange);    
+            Gizmos.DrawRay(transform.position, (targetLight.transform.position - transform.position).normalized * lightRange);    
         }
     }
 

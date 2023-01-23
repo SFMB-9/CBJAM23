@@ -21,10 +21,10 @@ public class MusicLoop : MonoBehaviour
 
     private IEnumerator PlayLooping()
     {
-        introSource.Play();
-        yield return new WaitForSeconds(introSource.clip.length - 1.1f);
-        loopSource.Play();
+        introSource.Play(); 
+        loopSource.PlayScheduled(AudioSettings.dspTime + intro.length);
         loopSource.PlayScheduled(AudioSettings.dspTime + loop.length);
+        yield return null;
     }
 
 }
