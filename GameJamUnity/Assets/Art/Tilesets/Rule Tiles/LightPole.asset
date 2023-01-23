@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: LightPole
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 0}
-  m_DefaultGameObject: {fileID: 0}
+  m_DefaultGameObject: {fileID: 1017293141710974115, guid: 07f4dd6936279ef48ad5d08003e86376, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 0}
-    m_GameObject: {fileID: 0}
+    - {fileID: -121080284, guid: 9bfa86aa5ffbc5d48a613bb11b19534f, type: 3}
+    m_GameObject: {fileID: 1017293141710974115, guid: 07f4dd6936279ef48ad5d08003e86376, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5
