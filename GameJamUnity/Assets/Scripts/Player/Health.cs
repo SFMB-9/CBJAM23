@@ -160,17 +160,6 @@ public class Health : MonoBehaviour
             onLight = false;
         }
     }
-    
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, lightRange);
-
-        if (onLight)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawRay(transform.position, (targetLight.transform.position - transform.position).normalized * lightRange);    
-        }
     }
 
 }
