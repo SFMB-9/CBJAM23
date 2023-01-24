@@ -24,7 +24,7 @@ public class Mover : MonoBehaviour
 
     public void MoveTo(Vector3 destination, float speedFraction = 2f)
     {
-        
+
         animator.SetTrigger("Run");
         if (destination.x < transform.position.x)
         {
@@ -40,6 +40,7 @@ public class Mover : MonoBehaviour
             else
                 transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+
         agent.SetDestination(destination);
         agent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
         agent.isStopped = false;
@@ -51,10 +52,15 @@ public class Mover : MonoBehaviour
         animator.SetTrigger("Stop");
         agent.isStopped = true;
     }
-    
+
     public bool HasPath()
     {
         return agent.hasPath;
+    }
+
+    public void StopTheCoroutine()
+    {
+        StopAllCoroutines();
     }
 
     private IEnumerator DestinationCheck()

@@ -8,7 +8,9 @@ public class ScoreDisplay : MonoBehaviour
 {
     [SerializeField] private int currentScore = 0;
     [SerializeField] private int scorePerBite = 200;
-    
+
+    public static Action<int> OnScore;
+
     private TextMeshProUGUI scoreText;
 
     private void Awake()
@@ -28,7 +30,13 @@ public class ScoreDisplay : MonoBehaviour
 
     private void AddScore()
     {
+        OnScore?.Invoke(currentScore);
         currentScore += scorePerBite;
         scoreText.text = "Score: " + currentScore.ToString();
+    }
+    
+    public int GetScore()
+    {
+        return currentScore;
     }
 }

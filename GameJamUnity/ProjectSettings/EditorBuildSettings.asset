@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 154ad060c8c84b54b9ed256b2d1ab148
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8af08d697066a0d4093e5fb2d7c3ee13
+    path: Assets/Scenes/Crypt.unity
+    guid: 32634d8746a1903469067abd6869f968
   - enabled: 1
     path: Assets/Scenes/Overworld.unity
     guid: 514c4a5b11001034096baf511ae4883d

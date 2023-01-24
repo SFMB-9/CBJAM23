@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +12,24 @@ public class newScore : MonoBehaviour
     [SerializeField]
     GameObject TextScore;
 
-    void Awake()
+    private void OnEnable()
     {
+        ScoreDisplay.OnScore += UpdateScore;
+    }
+    
+    private void OnDisable()
+    {
+        ScoreDisplay.OnScore -= UpdateScore;
+    }
+
+    private void UpdateScore(int _score)
+    {
+        Debug.Log(_score);
+        score = _score;
         TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
     }
-    IEnumerator NewScore(int score, string name)
+
+        IEnumerator NewScore(int score, string name)
     {
         WWWForm form = new WWWForm();
 

@@ -8,9 +8,9 @@ public class LightController : MonoBehaviour
 {
     [Header("Light Settings")]
     [SerializeField] private float lightHealth = 100f;
-    [SerializeField] private Sprite lightOn;
-    [SerializeField] private Sprite lightOff; 
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite lightOn = null;
+    [SerializeField] private Sprite lightOff = null; 
+    [SerializeField] private SpriteRenderer spriteRenderer = null;
     private Light2D light;
     private Collider2D lightCollider;
 
@@ -22,6 +22,7 @@ public class LightController : MonoBehaviour
 
     private void Start()
     {
+        if (spriteRenderer == null) return; 
         spriteRenderer.sprite = lightOn;
     }
 
@@ -40,6 +41,9 @@ public class LightController : MonoBehaviour
     
     private void TurnOff()
     {
+        if (spriteRenderer == null) return;
+        if (lightOn == null) return;
+        if (lightOff == null) return;
         spriteRenderer.sprite = lightOff;
         light.enabled = false;
         lightCollider.enabled = false;

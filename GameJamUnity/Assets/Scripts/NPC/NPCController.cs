@@ -104,6 +104,7 @@ public class NPCController : MonoBehaviour
 
     private void Die()
     {
+        mover.StopTheCoroutine();
         Destroy(gameObject);
     }
     
