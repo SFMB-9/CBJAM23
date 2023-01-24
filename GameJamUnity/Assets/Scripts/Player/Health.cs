@@ -38,6 +38,7 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
         playerController = GetComponent<PlayerController>();
+        targetLight = null;
     }
 
     private void Start()
@@ -96,7 +97,8 @@ public class Health : MonoBehaviour
             if (onLight)
             {
                 if (targetLight != null)
-                    targetLight.GetComponent<LightController>().TakeDamage(lightHealthRegen);
+                    if (targetLight.GetComponent<LightController>().TakeDamage(lightHealthRegen))
+                        targetLight = null;
                 gainBloodParticles.SetActive(true);
                 looseBloodParticles.SetActive(false);
                 ApplyHealing(lightHealthRegen);

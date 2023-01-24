@@ -26,14 +26,16 @@ public class LightController : MonoBehaviour
     }
 
 
-    public void TakeDamage(float damage)
+    public bool TakeDamage(float damage)
     {
         lightHealth -= damage;
         light.intensity = lightHealth / 100f;
         if (lightHealth <= 0)
         {
             TurnOff();
+            return true;
         }
+        return false;
     }
     
     private void TurnOff()
