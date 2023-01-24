@@ -520,8 +520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a5d338a699a6694598bc7263060ec2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entryContainer: {fileID: 0}
-  entryTemplate: {fileID: 0}
+  entryContainer: {fileID: 344772018}
+  entryTemplate: {fileID: 294612350}
 --- !u!1 &377689335
 GameObject:
   m_ObjectHideFlags: 0
