@@ -36,7 +36,7 @@ public class newScore : MonoBehaviour
         form.AddField("name", name);
         form.AddField("score", score);
         
-        UnityWebRequest www = UnityWebRequest.Post("http://localhost:8000/newScore", form);
+        UnityWebRequest www = UnityWebRequest.Post("https://morbin-backend.onrender.com/newScore", form);
         yield return www.SendWebRequest();
 
         if(www.result != UnityWebRequest.Result.Success){
