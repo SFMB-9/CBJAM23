@@ -12,22 +12,22 @@ public class newScore : MonoBehaviour
     [SerializeField]
     GameObject TextScore;
 
-    private void OnEnable()
-    {
-        ScoreDisplay.OnScore += UpdateScore;
-    }
+    // private void OnEnable()
+    // {
+    //     ScoreDisplay.OnScore += UpdateScore;
+    // }
     
-    private void OnDisable()
-    {
-        ScoreDisplay.OnScore -= UpdateScore;
-    }
+    // private void OnDisable()
+    // {
+    //     ScoreDisplay.OnScore -= UpdateScore;
+    // }
 
-    private void UpdateScore(int _score)
-    {
-        Debug.Log(_score);
-        score = _score;
-        TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
-    }
+    // private void UpdateScore(int _score)
+    // {
+    //     Debug.Log(_score);
+    //     score = _score;
+    //     TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
+    // }
 
         IEnumerator NewScore(int score, string name)
     {
