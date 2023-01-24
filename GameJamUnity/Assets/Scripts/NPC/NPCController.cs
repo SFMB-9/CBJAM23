@@ -18,7 +18,9 @@ public class NPCController : MonoBehaviour
     [SerializeField] private float minimumDistanceToPlayer = 1f;
 
     [SerializeField] private AudioSource screamSoundEffect;
-    
+
+
+
     private GameObject player;
     private Mover mover;
     private Transform target;
@@ -48,6 +50,16 @@ public class NPCController : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOVroutine());
+    }
+
+    private void OnEnable()
+    {
+        Health.OnDie += Die;
+    }
+    
+    private void OnDisable()
+    {
+        Health.OnDie -= Die;
     }
 
     private void FixedUpdate()
@@ -90,6 +102,11 @@ public class NPCController : MonoBehaviour
         yield return null;
     }
 
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+    
     private void FieldOfViewCheck()
     {
         float range = viewRadius;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -14,6 +15,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float healthChangeRate = 0.1f;
     public static Action<float> OnDamage;
     public static Action<float> OnHeal;
+    public static Action OnDie;
 
     [Header("Light Range Parameters")] [SerializeField]
     private float lightRange = 5f;
@@ -25,6 +27,8 @@ public class Health : MonoBehaviour
     private GameObject gainBloodParticles;
 
     [SerializeField] private GameObject looseBloodParticles;
+    
+    [SerializeField] private GameObject gameOverCanvas;
 
 
     private GameObject targetLight;
@@ -84,10 +88,15 @@ public class Health : MonoBehaviour
         dead = true;
         gainBloodParticles.SetActive(false);
         looseBloodParticles.SetActive(false);
+        OnDie?.Invoke();
 
         animator.SetTrigger("Die");
         playerController.LockMovement();
-        // TODO CALL TO THE ANIMATIONS & STOP MOVEMENT
+        Debug.Log("Player Died");
+
+        Debug.Log("Game Over");
+        gameOverCanvas.SetActive(true);
+        Destroy(gameObject);
     }
 
     private IEnumerator UpdateHealth()

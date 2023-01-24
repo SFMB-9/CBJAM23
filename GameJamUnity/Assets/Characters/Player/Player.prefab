@@ -576,6 +576,7 @@ MonoBehaviour:
     m_Bits: 64
   gainBloodParticles: {fileID: 6057776828618583365}
   looseBloodParticles: {fileID: 7933052236734049351}
+  gameOverCanvas: {fileID: 0}
   damageSoundEffect: {fileID: 6517467672799035159}
 --- !u!50 &972059391
 Rigidbody2D:

@@ -27,7 +27,6 @@ public class GetRoamPoint : MonoBehaviour
                 radius == 0 ? this.range : radius, out var _point))
         {
             Debug.DrawRay(_point, Vector3.up, Color.red, 1f);
-            print("Returning new position");
             return _point;
         }
 
