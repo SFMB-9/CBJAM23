@@ -258,12 +258,12 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: 16, y: -64}
-        - {x: 16, y: 0}
-        - {x: -16, y: 0}
+        - {x: 6, y: -64}
+        - {x: -5, y: -64}
         - {x: -16, y: -64}
         - {x: -23, y: -64}
-        - {x: -23, y: 5}
-        - {x: 23, y: 5}
+        - {x: -23, y: -46}
+        - {x: 23, y: -46}
         - {x: 23, y: -64}
       tessellationDetail: 0
       bones: []
@@ -688,7 +688,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
