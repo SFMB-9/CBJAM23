@@ -9,14 +9,15 @@ public class LightController : MonoBehaviour
     [Header("Light Settings")]
     [SerializeField] private float lightHealth = 100f;
     [SerializeField] private Sprite lightOn;
-    [SerializeField] private Sprite lightOff;
-    [SerializeField] private Light2D light;
-    [SerializeField] private Collider2D lightCollider;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite lightOff; 
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    private Light2D light;
+    private Collider2D lightCollider;
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        lightCollider = GetComponent<Collider2D>();
+        light = GetComponent<Light2D>();
     }
 
     private void Start()

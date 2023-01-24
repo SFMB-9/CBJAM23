@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6299309824651322363}
   - component: {fileID: 8299200810245648216}
-  - component: {fileID: 5092872340942287140}
   m_Layer: 10
   m_Name: LightPole
   m_TagString: Untagged
@@ -86,23 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5092872340942287140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017293141710974115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b1554889aa202e429387167965d76dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightHealth: 100
-  lightOn: {fileID: -121080284, guid: 9bfa86aa5ffbc5d48a613bb11b19534f, type: 3}
-  lightOff: {fileID: -862870230, guid: 9bfa86aa5ffbc5d48a613bb11b19534f, type: 3}
-  light: {fileID: 1909033450384163839}
-  lightCollider: {fileID: 721409532163112854}
 --- !u!1 &5229657819089757514
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +96,7 @@ GameObject:
   - component: {fileID: 6767418850283536172}
   - component: {fileID: 1909033450384163839}
   - component: {fileID: 721409532163112854}
+  - component: {fileID: 2100727905290496129}
   m_Layer: 10
   m_Name: Light
   m_TagString: Untagged
@@ -151,7 +134,7 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.64
+  m_FalloffIntensity: 0.408
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
@@ -231,3 +214,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2100727905290496129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229657819089757514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1554889aa202e429387167965d76dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightHealth: 100
+  lightOn: {fileID: -121080284, guid: 9bfa86aa5ffbc5d48a613bb11b19534f, type: 3}
+  lightOff: {fileID: -862870230, guid: 9bfa86aa5ffbc5d48a613bb11b19534f, type: 3}
+  spriteRenderer: {fileID: 8299200810245648216}

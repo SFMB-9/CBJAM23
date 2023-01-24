@@ -19,8 +19,13 @@ public class Health : MonoBehaviour
     [SerializeField] private LayerMask lightMask;
     [SerializeField] private LayerMask obstructionMask;
     
+    [Header("Particle System")]
+    [SerializeField] private GameObject gainBloodParticles;
+    [SerializeField] private GameObject looseBloodParticles;
+    
+    
     private GameObject targetLight;
-    [SerializeField] private bool onLight;
+    private bool onLight;
     private bool dead;
     private Animator animator;
     PlayerController playerController;
@@ -73,7 +78,8 @@ public class Health : MonoBehaviour
         damageSoundEffect.clip = null;
         currentHealth = 0;
         dead = true;
-        StopCoroutine(UpdateHealth());
+        gainBloodParticles.SetActive(false);
+        looseBloodParticles.SetActive(false);
         
         animator.SetTrigger("Die");
         playerController.LockMovement();
@@ -91,12 +97,16 @@ public class Health : MonoBehaviour
             {
                 if (targetLight != null)
                     targetLight.GetComponent<LightController>().TakeDamage(lightHealthRegen);
+                gainBloodParticles.SetActive(true);
+                looseBloodParticles.SetActive(false);
                 ApplyHealing(lightHealthRegen);
                 damageSoundEffect.Stop();
             }
             else
             {
                 ApplyDamage(darkHealthLoss);
+                looseBloodParticles.SetActive(true);
+                gainBloodParticles.SetActive(false);
                 if (!damageSoundEffect.isPlaying)
                 {
                     damageSoundEffect.Play();
