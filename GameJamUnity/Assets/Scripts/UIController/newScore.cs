@@ -11,7 +11,6 @@ public class newScore : MonoBehaviour
     int score = 0;
     [SerializeField]
     GameObject TextScore;
-    [SerializeField] TextMeshProUGUI text;
 
     // private void OnEnable()
     // {

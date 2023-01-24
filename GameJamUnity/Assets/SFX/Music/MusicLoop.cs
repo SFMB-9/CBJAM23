@@ -21,7 +21,11 @@ public class MusicLoop : MonoBehaviour
 
     private IEnumerator PlayLooping()
     {
-        if (introSource.isPlaying || loopSource.isPlaying) yield break;
+<<<<<<< HEAD
+        introSource.Stop();
+        loopSource.Stop();
+=======
+>>>>>>> parent of 35a53fd (Merge branch 'main' of github.com:SFMBa01029956/CBJAM23)
         introSource.Play(); 
         loopSource.PlayScheduled(AudioSettings.dspTime + intro.length);
         loopSource.PlayScheduled(AudioSettings.dspTime + loop.length);
