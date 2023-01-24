@@ -19,8 +19,13 @@ public class Health : MonoBehaviour
     [SerializeField] private LayerMask lightMask;
     [SerializeField] private LayerMask obstructionMask;
     
-    private Transform lightTransform;
-    [SerializeField] private bool onLight;
+    [Header("Particle System")]
+    [SerializeField] private GameObject gainBloodParticles;
+    [SerializeField] private GameObject looseBloodParticles;
+    
+    
+    private GameObject targetLight;
+    private bool onLight;
     private bool dead;
     private Animator animator;
     PlayerController playerController;
@@ -73,7 +78,8 @@ public class Health : MonoBehaviour
         damageSoundEffect.clip = null;
         currentHealth = 0;
         dead = true;
-        StopCoroutine(UpdateHealth());
+        gainBloodParticles.SetActive(false);
+        looseBloodParticles.SetActive(false);
         
         animator.SetTrigger("Die");
         playerController.LockMovement();
@@ -89,12 +95,18 @@ public class Health : MonoBehaviour
         {
             if (onLight)
             {
+                if (targetLight != null)
+                    targetLight.GetComponent<LightController>().TakeDamage(lightHealthRegen);
+                gainBloodParticles.SetActive(true);
+                looseBloodParticles.SetActive(false);
                 ApplyHealing(lightHealthRegen);
                 damageSoundEffect.Stop();
             }
             else
             {
                 ApplyDamage(darkHealthLoss);
+                looseBloodParticles.SetActive(true);
+                gainBloodParticles.SetActive(false);
                 if (!damageSoundEffect.isPlaying)
                 {
                     damageSoundEffect.Play();
@@ -125,10 +137,10 @@ public class Health : MonoBehaviour
         
         if (rangeChecks.Length != 0)
         {
-            lightTransform = rangeChecks[0].transform;
-            Vector2 directionToTarget = (lightTransform.transform.position - transform.position).normalized;
+            targetLight = rangeChecks[0].gameObject;
+            Vector2 directionToTarget = (targetLight.transform.position - transform.position).normalized;
             
-            float distanceToTarget = Vector2.Distance(transform.position, lightTransform.transform.position);
+            float distanceToTarget = Vector2.Distance(transform.position, targetLight.transform.position);
 
             if (distanceToTarget <= range)
             {
@@ -155,7 +167,7 @@ public class Health : MonoBehaviour
         if (onLight)
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawRay(transform.position, (lightTransform.position - transform.position).normalized * lightRange);    
+            Gizmos.DrawRay(transform.position, (targetLight.transform.position - transform.position).normalized * lightRange);    
         }
     }
 
