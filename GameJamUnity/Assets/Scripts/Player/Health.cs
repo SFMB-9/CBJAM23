@@ -5,25 +5,28 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [Header("Health Parameters")]
-    [SerializeField] private float maxHealth = 100f;
+    [Header("Health Parameters")] [SerializeField]
+    private float maxHealth = 100f;
+
     [SerializeField] private float currentHealth;
     [SerializeField] private float lightHealthRegen = 0.1f;
     [SerializeField] private float darkHealthLoss = 0.1f;
     [SerializeField] private float healthChangeRate = 0.1f;
     public static Action<float> OnDamage;
     public static Action<float> OnHeal;
-    
-    [Header("Light Range Parameters")]
-    [SerializeField] private float lightRange = 5f;
+
+    [Header("Light Range Parameters")] [SerializeField]
+    private float lightRange = 5f;
+
     [SerializeField] private LayerMask lightMask;
     [SerializeField] private LayerMask obstructionMask;
-    
-    [Header("Particle System")]
-    [SerializeField] private GameObject gainBloodParticles;
+
+    [Header("Particle System")] [SerializeField]
+    private GameObject gainBloodParticles;
+
     [SerializeField] private GameObject looseBloodParticles;
-    
-    
+
+
     private GameObject targetLight;
     private bool onLight;
     private bool dead;
@@ -46,13 +49,13 @@ public class Health : MonoBehaviour
         StartCoroutine(UpdateHealth());
         StartCoroutine(LightFOVRoutine());
     }
-    
+
 
     public void ApplyDamage(float damage)
     {
         currentHealth -= damage;
         OnDamage?.Invoke(currentHealth);
-        
+
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -60,16 +63,16 @@ public class Health : MonoBehaviour
         }
 
     }
-    
+
     private void ApplyHealing(float healing)
     {
         currentHealth += healing;
-        
+
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
-        
+
         OnHeal?.Invoke(currentHealth);
     }
 
@@ -81,12 +84,12 @@ public class Health : MonoBehaviour
         dead = true;
         gainBloodParticles.SetActive(false);
         looseBloodParticles.SetActive(false);
-        
+
         animator.SetTrigger("Die");
         playerController.LockMovement();
         // TODO CALL TO THE ANIMATIONS & STOP MOVEMENT
     }
-    
+
     private IEnumerator UpdateHealth()
     {
         yield return new WaitForSeconds(5f);
@@ -114,13 +117,13 @@ public class Health : MonoBehaviour
                     damageSoundEffect.Play();
                 }
             }
-                
+
 
             yield return timeToWait;
         }
     }
-    
-    
+
+
     private IEnumerator LightFOVRoutine()
     {
         WaitForSeconds wait = new WaitForSeconds(0.1f);
@@ -136,12 +139,12 @@ public class Health : MonoBehaviour
     {
         float range = lightRange;
         Collider2D[] rangeChecks = Physics2D.OverlapCircleAll(transform.position, range, lightMask);
-        
+
         if (rangeChecks.Length != 0)
         {
             targetLight = rangeChecks[0].gameObject;
             Vector2 directionToTarget = (targetLight.transform.position - transform.position).normalized;
-            
+
             float distanceToTarget = Vector2.Distance(transform.position, targetLight.transform.position);
 
             if (distanceToTarget <= range)
@@ -153,11 +156,12 @@ public class Health : MonoBehaviour
                     onLight = false;
                 }
             }
-         
+
         }
         else
         {
             onLight = false;
         }
+
     }
 }
