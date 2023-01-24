@@ -13,14 +13,22 @@ public class newScore : MonoBehaviour
     GameObject TextScore;
     [SerializeField] TextMeshProUGUI text;
 
+    // private void OnEnable()
+    // {
+    //     ScoreDisplay.OnScore += UpdateScore;
+    // }
     
-    
-    private void UpdateScore(int _score)
-    {
-        Debug.Log(_score);
-        score = _score;
-        text.text = "YOUЯ SCOЯE: " + score.ToString();
-    }
+    // private void OnDisable()
+    // {
+    //     ScoreDisplay.OnScore -= UpdateScore;
+    // }
+
+    // private void UpdateScore(int _score)
+    // {
+    //     Debug.Log(_score);
+    //     score = _score;
+    //     TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
+    // }
 
         IEnumerator NewScore(int score, string name)
     {
@@ -29,7 +37,7 @@ public class newScore : MonoBehaviour
         form.AddField("name", name);
         form.AddField("score", score);
         
-        UnityWebRequest www = UnityWebRequest.Post("http://localhost:8000/newScore", form);
+        UnityWebRequest www = UnityWebRequest.Post("https://morbin-backend.onrender.com/newScore", form);
         yield return www.SendWebRequest();
 
         if(www.result != UnityWebRequest.Result.Success){
