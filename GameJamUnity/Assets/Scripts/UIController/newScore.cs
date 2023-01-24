@@ -7,29 +7,24 @@ using TMPro;
 
 public class newScore : MonoBehaviour
 {
-    string initials;
+        string initials;
     int score = 0;
     [SerializeField]
     GameObject TextScore;
-    [SerializeField] TextMeshProUGUI text;
+    public ScoreDisplay _score;
 
-    
-    
-    private void UpdateScore(int _score)
-    {
-        Debug.Log(_score);
-        score = _score;
-        text.text = "YOUЯ SCOЯE: " + score.ToString();
+    void Awake()
+    {   score = _score.currentScore;
+        TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
     }
-
-        IEnumerator NewScore(int score, string name)
+    IEnumerator NewScore(int score, string name)
     {
         WWWForm form = new WWWForm();
 
         form.AddField("name", name);
         form.AddField("score", score);
         
-        UnityWebRequest www = UnityWebRequest.Post("http://localhost:8000/newScore", form);
+        UnityWebRequest www = UnityWebRequest.Post("https://morbin-backend.onrender.com/newScore", form);
         yield return www.SendWebRequest();
 
         if(www.result != UnityWebRequest.Result.Success){
