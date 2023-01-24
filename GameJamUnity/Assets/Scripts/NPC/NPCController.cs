@@ -8,7 +8,6 @@ public class NPCController : MonoBehaviour
 {
     
     [Header("Movement Parameters")]
-    [SerializeField] private float walkSpeed = 2f;
     [SerializeField] private float runSpeed = 3f;
     
     [Header("FOV Parameters")]

@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator MoveTowards(Vector2 targetDestination, float time)
     {
         Vector2 startPosition = transform.position;
-        var destination = new Vector2(targetDestination.x -.2f, targetDestination.y); 
+        var destination = new Vector2(targetDestination.x -.2f, targetDestination.y - .5f); 
         float elapsedTime = 0;
         while (elapsedTime < time)
         {
