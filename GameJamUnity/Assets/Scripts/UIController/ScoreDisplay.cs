@@ -8,12 +8,16 @@ public class ScoreDisplay : MonoBehaviour
 {
     [SerializeField] private int currentScore = 0;
     [SerializeField] private int scorePerBite = 200;
-    
+    [SerializeField] GameObject finalScore;
+
+    public static Action<int> OnScore;
+
     private TextMeshProUGUI scoreText;
 
     private void Awake()
     {
         scoreText = GetComponent<TextMeshProUGUI>();
+
     }
 
     private void OnEnable()
@@ -28,7 +32,14 @@ public class ScoreDisplay : MonoBehaviour
 
     private void AddScore()
     {
+        OnScore?.Invoke(currentScore);
         currentScore += scorePerBite;
         scoreText.text = "Score: " + currentScore.ToString();
+        finalScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + currentScore.ToString();
+    }
+    
+    public int GetScore()
+    {
+        return currentScore;
     }
 }
