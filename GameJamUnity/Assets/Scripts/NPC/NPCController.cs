@@ -90,15 +90,6 @@ public class NPCController : MonoBehaviour
         yield return null;
     }
 
-<<<<<<< HEAD
-=======
-    private void Die()
-    {
-        mover.StopTheCoroutine();
-        Destroy(gameObject);
-    }
-    
->>>>>>> aa9d07cc607e131f38490b0008092c1a6d7513fe
     private void FieldOfViewCheck()
     {
         float range = viewRadius;
