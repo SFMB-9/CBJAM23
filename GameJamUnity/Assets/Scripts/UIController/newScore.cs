@@ -13,6 +13,8 @@ public class newScore : MonoBehaviour
     GameObject TextScore;
     public ScoreDisplay _score;
 
+    [SerializeField] private GameObject submit;
+    // Start is called before the first frame update
     void Awake()
     {   score = _score.currentScore;
         TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
@@ -32,6 +34,7 @@ public class newScore : MonoBehaviour
         }else{
             Debug.Log("Score saved!");
         }
+        submit.SetActive(false);
     }
 
     public void readString(string text)
