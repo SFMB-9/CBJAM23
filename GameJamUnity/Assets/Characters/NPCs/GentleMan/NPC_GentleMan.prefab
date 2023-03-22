@@ -163,6 +163,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &4578487147689549466
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -201,8 +202,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1826732255
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 529073636, guid: 391d31a0468a2994e8820aafd5162992, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

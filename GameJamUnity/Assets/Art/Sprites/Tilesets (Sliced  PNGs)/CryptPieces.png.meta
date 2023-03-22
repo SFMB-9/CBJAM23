@@ -239,10 +239,14 @@ TextureImporter:
         width: 32
         height: 80
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -40}
+        - {x: -13, y: -24}
+        - {x: 13, y: -24}
+        - {x: 16, y: -40}
       tessellationDetail: 0
       bones: []
       spriteID: e8f822d4c933bab46beaa3da545e5fa2
@@ -958,41 +962,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CryptPieces_8: -745571428
-      CryptPieces_4: -1925459300
-      crypt_assets_1: -511096960
-      crypt_assets_6: -1628465107
-      crypt_assets_19: 1641060252
       CryptPieces_0: 358643744
-      crypt_assets_3: 1738171367
-      CryptPieces_13: 1821289028
-      crypt_assets_11: 1972492008
-      crypt_assets_9: -1769199524
-      CryptPieces_12: -366794927
-      CryptPieces_9: 1142387648
-      crypt_assets_13: -1754692768
-      crypt_assets_5: -33295820
-      crypt_assets_18: -893312024
-      crypt_assets_8: 1858763913
-      crypt_assets_14: -1601875858
-      crypt_assets_16: -920971661
-      crypt_assets_0: -228444518
-      CryptPieces_6: -587141357
-      CryptPieces_14: 745332283
-      crypt_assets_4: -350958271
-      crypt_assets_17: 354498096
-      crypt_assets_12: 206998622
-      crypt_assets_15: 781608876
       CryptPieces_1: -885582330
-      crypt_assets_10: 1254732690
-      crypt_assets_2: -413265337
-      CryptPieces_3: 766521799
-      CryptPieces_11: 620115910
-      CryptPieces_2: -1901844215
       CryptPieces_10: 2033906487
-      crypt_assets_7: -1257638863
-      CryptPieces_7: -1646902972
+      CryptPieces_11: 620115910
+      CryptPieces_12: -366794927
+      CryptPieces_13: 1821289028
+      CryptPieces_14: 745332283
+      CryptPieces_2: -1901844215
+      CryptPieces_3: 766521799
+      CryptPieces_4: -1925459300
       CryptPieces_5: 2089192480
+      CryptPieces_6: -587141357
+      CryptPieces_7: -1646902972
+      CryptPieces_8: -745571428
+      CryptPieces_9: 1142387648
+      crypt_assets_0: -228444518
+      crypt_assets_1: -511096960
+      crypt_assets_10: 1254732690
+      crypt_assets_11: 1972492008
+      crypt_assets_12: 206998622
+      crypt_assets_13: -1754692768
+      crypt_assets_14: -1601875858
+      crypt_assets_15: 781608876
+      crypt_assets_16: -920971661
+      crypt_assets_17: 354498096
+      crypt_assets_18: -893312024
+      crypt_assets_19: 1641060252
+      crypt_assets_2: -413265337
+      crypt_assets_3: 1738171367
+      crypt_assets_4: -350958271
+      crypt_assets_5: -33295820
+      crypt_assets_6: -1628465107
+      crypt_assets_7: -1257638863
+      crypt_assets_8: 1858763913
+      crypt_assets_9: -1769199524
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
