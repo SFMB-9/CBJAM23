@@ -21,6 +21,8 @@ public class MusicLoop : MonoBehaviour
 
     private IEnumerator PlayLooping()
     {
+        introSource.Stop();
+        loopSource.Stop();
         introSource.Play(); 
         loopSource.PlayScheduled(AudioSettings.dspTime + intro.length);
         loopSource.PlayScheduled(AudioSettings.dspTime + loop.length);

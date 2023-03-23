@@ -74,7 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc3354dc8d7fa44faa80b5c18f6f0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
   runSpeed: 3
   viewRadius: 5
   viewAngle: 90
@@ -164,6 +163,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1487200624570910490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -202,8 +202,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1826732255
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1508909683, guid: 114275cd7c3bb2d4a933ffd64eb1fb1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

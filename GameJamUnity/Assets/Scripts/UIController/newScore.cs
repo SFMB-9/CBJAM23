@@ -7,29 +7,19 @@ using TMPro;
 
 public class newScore : MonoBehaviour
 {
-    string initials;
+        string initials;
     int score = 0;
     [SerializeField]
     GameObject TextScore;
+    public ScoreDisplay _score;
 
-    // private void OnEnable()
-    // {
-    //     ScoreDisplay.OnScore += UpdateScore;
-    // }
-    
-    // private void OnDisable()
-    // {
-    //     ScoreDisplay.OnScore -= UpdateScore;
-    // }
-
-    // private void UpdateScore(int _score)
-    // {
-    //     Debug.Log(_score);
-    //     score = _score;
-    //     TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
-    // }
-
-        IEnumerator NewScore(int score, string name)
+    [SerializeField] private GameObject submit;
+    // Start is called before the first frame update
+    void Awake()
+    {   score = _score.currentScore;
+        TextScore.GetComponent<TMP_Text>().text = "YOUЯ SCOЯE: " + score.ToString();
+    }
+    IEnumerator NewScore(int score, string name)
     {
         WWWForm form = new WWWForm();
 
@@ -44,6 +34,7 @@ public class newScore : MonoBehaviour
         }else{
             Debug.Log("Score saved!");
         }
+        submit.SetActive(false);
     }
 
     public void readString(string text)

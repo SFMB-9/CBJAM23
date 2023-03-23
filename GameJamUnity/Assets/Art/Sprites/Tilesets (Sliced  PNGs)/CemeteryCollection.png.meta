@@ -124,8 +124,8 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -157,8 +157,8 @@ TextureImporter:
         y: 160
         width: 112
         height: 144
-      alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -182,8 +182,8 @@ TextureImporter:
         y: 160
         width: 112
         height: 144
-      alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -217,8 +217,8 @@ TextureImporter:
         y: 176
         width: 80
         height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -253,7 +253,7 @@ TextureImporter:
         width: 48
         height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -285,7 +285,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: -8}
+        - {x: -3, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 64625a122f7232f4d90e3d2368fc5362
@@ -306,7 +310,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: -7}
+        - {x: 8, y: -7}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 375cae61c1788f5468112fcd42fab691
@@ -327,7 +335,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: -7}
+        - {x: 1, y: -7}
+        - {x: 1, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: aab53ed5a34863449a5cd0f65cb1ec8c
@@ -566,8 +578,8 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -638,7 +650,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: 0.5, y: 0.16666667}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -662,8 +674,8 @@ TextureImporter:
         y: 112
         width: 48
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -713,7 +725,7 @@ TextureImporter:
         width: 48
         height: 80
       alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -813,7 +825,7 @@ TextureImporter:
         width: 48
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -838,7 +850,7 @@ TextureImporter:
         width: 48
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -863,7 +875,7 @@ TextureImporter:
         width: 48
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -888,7 +900,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -915,7 +927,7 @@ TextureImporter:
         width: 16
         height: 64
       alignment: 9
-      pivot: {x: 0.54, y: 0.05}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -942,7 +954,7 @@ TextureImporter:
         width: 16
         height: 64
       alignment: 9
-      pivot: {x: 0.46, y: 0.05}
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -1056,8 +1068,8 @@ TextureImporter:
         y: 48
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -1136,8 +1148,8 @@ TextureImporter:
         y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1157,8 +1169,8 @@ TextureImporter:
         y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1254,13 +1266,13 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
       - - {x: -8, y: -8}
-        - {x: -8, y: -2}
-        - {x: 8, y: -2}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
         - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
@@ -1404,8 +1416,8 @@ TextureImporter:
         y: 48
         width: 48
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1488,8 +1500,8 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -1577,7 +1589,7 @@ TextureImporter:
         width: 32
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.025}
+      pivot: {x: 0.5, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -1602,7 +1614,7 @@ TextureImporter:
         width: 32
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.025}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -1626,8 +1638,8 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -1651,8 +1663,8 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -1805,76 +1817,76 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CemeteryCollection_40: -1601409103
-      CemeteryCollection_58: -1319960979
-      CemeteryCollection_44: 1998125496
-      CemeteryCollection_43: 2089200639
-      CemeteryCollection_38: -458438280
-      CemeteryCollection_26: -162449205
-      CemeteryCollection_61: 688638092
+      CemeteryCollection_0: 1197730115
       CemeteryCollection_1: 821319415
-      CemeteryCollection_31: 1625881657
-      CemeteryCollection_24: -1207727518
-      CemeteryCollection_49: 687654348
-      CemeteryCollection_17: 1100221569
-      CemeteryCollection_64: 1515801602
-      CemeteryCollection_67: -1909597709
+      CemeteryCollection_10: 149370967
+      CemeteryCollection_11: 1126856217
       CemeteryCollection_12: 26320116
+      CemeteryCollection_13: -2058760416
+      CemeteryCollection_14: 1114556097
       CemeteryCollection_15: -1152131402
-      CemeteryCollection_8: 220160408
-      CemeteryCollection_3: 1843355413
-      CemeteryCollection_57: 843813554
-      CemeteryCollection_30: 634894400
-      CemeteryCollection_41: -108371294
-      CemeteryCollection_59: 902759598
+      CemeteryCollection_16: 1406502912
+      CemeteryCollection_17: 1100221569
       CemeteryCollection_18: 1540709835
+      CemeteryCollection_19: -1209535359
+      CemeteryCollection_2: 1545094972
+      CemeteryCollection_20: 1229023315
+      CemeteryCollection_21: 576501268
+      CemeteryCollection_22: 330300935
+      CemeteryCollection_23: 537110110
+      CemeteryCollection_24: -1207727518
+      CemeteryCollection_25: -1874261677
+      CemeteryCollection_26: -162449205
+      CemeteryCollection_27: -991484274
+      CemeteryCollection_28: -1747890528
+      CemeteryCollection_29: -1446937780
+      CemeteryCollection_3: 1843355413
+      CemeteryCollection_30: 634894400
+      CemeteryCollection_31: 1625881657
+      CemeteryCollection_32: -121080284
+      CemeteryCollection_33: -862870230
+      CemeteryCollection_34: 2042570472
+      CemeteryCollection_35: -1610772592
       CemeteryCollection_36: -353971879
       CemeteryCollection_37: 513243474
-      CemeteryCollection_51: -1124706967
-      CemeteryCollection_10: 149370967
-      CemeteryCollection_9: 1025661652
-      CemeteryCollection_28: -1747890528
-      CemeteryCollection_27: -991484274
-      CemeteryCollection_46: 227422005
-      CemeteryCollection_62: 937381609
+      CemeteryCollection_38: -458438280
       CemeteryCollection_39: 889085704
-      CemeteryCollection_11: 1126856217
-      CemeteryCollection_29: -1446937780
-      CemeteryCollection_13: -2058760416
-      CemeteryCollection_34: 2042570472
-      CemeteryCollection_23: 537110110
-      CemeteryCollection_32: -121080284
-      CemeteryCollection_21: 576501268
-      CemeteryCollection_35: -1610772592
-      CemeteryCollection_60: 1695121431
-      CemeteryCollection_2: 1545094972
-      CemeteryCollection_47: 1044041898
-      CemeteryCollection_22: 330300935
-      CemeteryCollection_48: 1469385349
-      CemeteryCollection_54: 1151018149
-      CemeteryCollection_42: -1505145766
-      CemeteryCollection_7: 715719569
-      CemeteryCollection_66: 1759740555
-      CemeteryCollection_68: -1290422194
-      CemeteryCollection_25: -1874261677
-      CemeteryCollection_5: -1095043240
-      CemeteryCollection_6: -1105254757
-      CemeteryCollection_14: 1114556097
-      CemeteryCollection_53: -33245709
-      CemeteryCollection_0: 1197730115
-      CemeteryCollection_52: 2028746375
-      CemeteryCollection_69: -284239723
       CemeteryCollection_4: -172181792
-      CemeteryCollection_16: 1406502912
-      CemeteryCollection_20: 1229023315
-      CemeteryCollection_56: 1665357513
-      CemeteryCollection_65: 853689275
-      CemeteryCollection_19: -1209535359
+      CemeteryCollection_40: -1601409103
+      CemeteryCollection_41: -108371294
+      CemeteryCollection_42: -1505145766
+      CemeteryCollection_43: 2089200639
+      CemeteryCollection_44: 1998125496
       CemeteryCollection_45: -458770631
-      CemeteryCollection_33: -862870230
+      CemeteryCollection_46: 227422005
+      CemeteryCollection_47: 1044041898
+      CemeteryCollection_48: 1469385349
+      CemeteryCollection_49: 687654348
+      CemeteryCollection_5: -1095043240
       CemeteryCollection_50: -231567334
+      CemeteryCollection_51: -1124706967
+      CemeteryCollection_52: 2028746375
+      CemeteryCollection_53: -33245709
+      CemeteryCollection_54: 1151018149
       CemeteryCollection_55: -1985182870
+      CemeteryCollection_56: 1665357513
+      CemeteryCollection_57: 843813554
+      CemeteryCollection_58: -1319960979
+      CemeteryCollection_59: 902759598
+      CemeteryCollection_6: -1105254757
+      CemeteryCollection_60: 1695121431
+      CemeteryCollection_61: 688638092
+      CemeteryCollection_62: 937381609
       CemeteryCollection_63: 1069960144
+      CemeteryCollection_64: 1515801602
+      CemeteryCollection_65: 853689275
+      CemeteryCollection_66: 1759740555
+      CemeteryCollection_67: -1909597709
+      CemeteryCollection_68: -1290422194
+      CemeteryCollection_69: -284239723
+      CemeteryCollection_7: 715719569
+      CemeteryCollection_8: 220160408
+      CemeteryCollection_9: 1025661652
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
